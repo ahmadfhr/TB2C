@@ -28,7 +28,9 @@ public class RuangKelas {
     private String KondisiAc;
     private String PosisiAc;
     private String SSID;
-    private int Bandwidth;
+    private String Bandwidth;
+    private String ID;
+    private String Password;
     private int JumlahCctv;
     private String KondisiCctv;
     private String PosisiCctv;
@@ -61,11 +63,11 @@ public class RuangKelas {
         this.Bahaya = Bahaya;
     }
     
-    public int getBandwidth() {
+    public String getBandwidth() {
         return Bandwidth;
     }
 
-    public void setBandwidth(int Bandwidth) {
+    public void setBandwidth(String Bandwidth) {
         this.Bandwidth = Bandwidth;
     }
 
@@ -441,12 +443,20 @@ public class RuangKelas {
         this.LuasRasio = LuasRasio;
     }   
 
-    double HitungLuas(){
-        Luas = PanjangRuang*LebarRuang;
-        return Luas;
+    public String getID() {
+        return ID;
     }
-    double HitungRasioLuas(){
-        LuasRasio = JumlahKursi/Luas;
-        return LuasRasio;
+
+    public void setID(String ID) {
+        this.ID = ID;
     }
+
+    public String getPassword() {
+        return Password;
+    }
+
+    public void setPassword(String Password) {
+        this.Password = Password;
+    }
+      
 }
