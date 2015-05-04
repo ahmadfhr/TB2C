@@ -355,14 +355,210 @@ public class KontrolRuangKelas{
     
     //untuk menginputkan dan menganalisis sirkulasi udara , nilai pencahayaan , kelembapan,
     //suhu (Celcius).
-    void KebersihanRuangKelas(){
+    public void KebersihanRuangKelas(){
         
-       
+        System.out.println("\n");
+        System.out.println("Masukkan Sirkulasi udara pada Ruang tersebut : ");
+        String SirkulasiUdara = in.nextLine();
+        Kontrol.setSirkulasiUdara(SirkulasiUdara);
+        
+        System.out.println("----------Sirkulasi Udara----------\n");
+        System.out.println("Sirkulasi Udara :"+Kontrol.getSirkulasiUdara());
+        
+        if(Kontrol.getSirkulasiUdara().equalsIgnoreCase("Lancar")){
+              System.out.println("\n--> sirkulasi udara Sesuai");
+         }
+        else{
+              System.out.println("\n--> sirkulasi udara Tidak Sesuai");  
+         } 
+     
+        System.out.println("\n");
+        System.out.println("Masukkan Nilai Pencahayaan pada Ruang tersebut : ");
+        int NilaiPencahayaan = in.nextInt();in.nextLine();
+        Kontrol.setNilaiPencahayaan(NilaiPencahayaan);
+        
+        System.out.println("----------Nilai Pencahayaan----------\n");
+        System.out.println("Nilai Pencahayaan :"+Kontrol.getNilaiPencahayaan());
+        
+        if(Kontrol.getNilaiPencahayaan()>=250&&Kontrol.getNilaiPencahayaan()<=350){
+              System.out.println("\n--> nilai pencahayaan Sesuai");
+         }
+        else{
+              System.out.println("\n--> nilai pencahayaan Tidak Sesuai");  
+         }
+    
+        System.out.println("\n");
+        System.out.println("Masukkan Kelembapan pada Ruang tersebut : ");
+        int Kelembapan = in.nextInt();in.nextLine();
+        Kontrol.setKelembapan(Kelembapan);
+        
+        System.out.println("----------Kelembapan----------\n");
+        System.out.println("Kelembapan :"+Kontrol.getKelembapan());
+        
+        if(Kontrol.getKelembapan()>=70&&Kontrol.getKelembapan()<=80){
+              System.out.println("\n--> kelembapan Sesuai");
+         }
+        else{
+              System.out.println("\n--> kelembapan Tidak Sesuai");  
+         }
+        
+        System.out.println("\n");
+        System.out.println("Masukkan Suhu pada Ruang tersebut : ");
+        int Suhu = in.nextInt();in.nextLine();
+        Kontrol.setSuhu(Suhu);
+        
+        System.out.println("----------Suhu----------\n");
+        System.out.println("Suhu :"+Kontrol.getSuhu());
+        
+        if(Kontrol.getSuhu()>=25&&Kontrol.getSuhu()<=35){
+              System.out.println("\n--> Suhu Sesuai");
+         }
+        else{
+              System.out.println("\n--> Suhu Tidak Sesuai");  
+         } 
+        
+    }
+    //untuk menginputkan dan menganalisis kebisingan , bau , kebocoran ,kerusakan dan keausan.
+    public void KenyamananRuangKelas(){
+        
+        System.out.println("\n");
+        System.out.println("Masukkan kebisingan pada ruang tersebut : ");
+        String Kebisingan = in.nextLine();
+        Kontrol.setKebisingan(Kebisingan);
+        
+        System.out.println("----------Kebisingan----------\n");
+        System.out.println("Kebisingan :"+Kontrol.getKebisingan());
+        
+       if(Kontrol.getKebisingan().equalsIgnoreCase("Tidak Bising")){
+              System.out.println("\n--> Kebisingan Sesuai");
+         }
+       else{
+              System.out.println("\n--> Kebisingan Tidak Sesuai");  
+         }
+        
+        System.out.println("\n");
+        System.out.println("Masukkan Bau pada ruang tersebut : ");
+        String Bau = in.nextLine();
+        Kontrol.setBau(Bau);
+        
+        System.out.println("----------Bau----------\n");
+        System.out.println("Bau :"+Kontrol.getBau());
+        
+       if(Kontrol.getBau().equalsIgnoreCase("Tidak Bau")){
+              System.out.println("\n--> bau Sesuai");
+         }
+       else{
+              System.out.println("\n--> bau Tidak Sesuai");  
+         }
+        
+        System.out.println("\n");
+        System.out.println("Masukkan kebocoran pada ruang tersebut : ");
+        String Kebocoran = in.nextLine();
+        Kontrol.setKebocoran(Kebocoran);
+        
+        System.out.println("----------Kebocoran----------\n");
+        System.out.println("Kebocoran :"+Kontrol.getKebocoran());
+        
+       if(Kontrol.getKebocoran().equalsIgnoreCase("Tidak Bocor")){
+              System.out.println("\n--> kebocoran Sesuai");
+         }
+       else{
+              System.out.println("\n--> kebocoran Tidak Sesuai");  
+         } 
+        
+        System.out.println("\n");
+        System.out.println("Masukkan kerusakan pada ruang tersebut : ");
+        String Kerusakan = in.nextLine();
+        Kontrol.setKerusakan(Kerusakan);
+        
+        System.out.println("----------Kerusakan----------\n");
+        System.out.println("Kerusakan :"+Kontrol.getKerusakan());
+        
+       if(Kontrol.getKerusakan().equalsIgnoreCase("Tidak Rusak")){
+              System.out.println("\n--> kerusakan Sesuai");
+         }
+       else{
+              System.out.println("\n--> kerusakan Tidak Sesuai");  
+         } 
+        
+        System.out.println("\n");
+        System.out.println("Masukkan keausan pada ruang tersebut : ");
+        String Keausan = in.nextLine();
+        Kontrol.setKeausan(Keausan);
+        
+        System.out.println("----------Keausan----------\n");
+        System.out.println("Keausan :"+Kontrol.getKeausan());
+        
+       if(Kontrol.getKeausan().equalsIgnoreCase("Tidak Aus")){
+              System.out.println("\n--> keausan Sesuai");
+         } 
+       else{
+              System.out.println("\n--> keausan Tidak Sesuai");  
+         } 
+        
     }
     //untuk menginputkan dan menganalisis kekokohan , kunci pintu dan jendela , dan bahaya.
     public void KeamananRuangKelas(){
         
+        System.out.println("\n");
+        System.out.println("Masukkkan kekokohan dalam ruang tersebut : ");
+        String Kekokohan = in.nextLine();
+        Kontrol.setKekokohan(Kekokohan);
         
-    }
-    
+        System.out.println("----------Kekokohan----------\n");
+        System.out.println("Kekokohan :"+Kontrol.getKekokohan());
+        
+       if(Kontrol.getKekokohan().equalsIgnoreCase("Kokoh")){
+              System.out.println("\n--> kekokohan Sesuai");
+         }
+       else{
+              System.out.println("\n--> kekokohan Tidak Sesuai");  
+         } 
+        
+        System.out.println("\n");
+        System.out.println("Masukkkan kunci pintu dalam ruang tersebut : ");
+        String KunciPintu = in.nextLine();
+        Kontrol.setKunciPintu(KunciPintu);
+        
+        System.out.println("----------Kunci Pintu----------\n");
+        System.out.println("Kunci Pintu :"+Kontrol.getKunciPintu());
+        
+       if(Kontrol.getKunciPintu().equalsIgnoreCase("Ada")){
+              System.out.println("\n--> kunci pintu Sesuai");
+         }
+       else{
+              System.out.println("\n--> kunci pintu Tidak Sesuai");  
+         }
+        
+        System.out.println("\n");
+        System.out.println("Masukkkan kunci jendela dalam ruang tersebut : ");
+        String KunciJendela = in.nextLine();
+        Kontrol.setKunciJendela(KunciJendela);
+        
+        System.out.println("----------Kunci Jendela----------\n");
+        System.out.println("Kunci Jedela :"+Kontrol.getKunciJendela());
+        
+       if(Kontrol.getKunciJendela().equalsIgnoreCase("Ada")){
+              System.out.println("\n--> kunci jendela Sesuai");
+         }
+       else{
+              System.out.println("\n--> kunci jendela Tidak Sesuai");  
+         }
+        
+        System.out.println("\n");
+        System.out.println("Masukkkan bahaya dalam ruang tersebut : ");
+        String Bahaya = in.nextLine();
+        Kontrol.setBahaya(Bahaya);
+        
+        System.out.println("----------Bahaya----------\n");
+        System.out.println("Bahaya :"+Kontrol.getBahaya());
+         
+       if(Kontrol.getBahaya().equalsIgnoreCase("Aman")){
+              System.out.println("\n--> bahaya Sesuai");
+         }
+       else{
+              System.out.println("\n--> bahaya Tidak Sesuai");  
+         } 
+        
+    }   
 }
