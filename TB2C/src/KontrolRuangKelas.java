@@ -360,7 +360,7 @@ public class KontrolRuangKelas{
        
     }
     //untuk menginputkan dan menganalisis kekokohan , kunci pintu dan jendela , dan bahaya.
-    void KeamananRuangKelas(){
+    public void KeamananRuangKelas(){
         
         
     }
