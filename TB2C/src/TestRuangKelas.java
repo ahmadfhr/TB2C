@@ -25,5 +25,50 @@ public class TestRuangKelas {
         Test3.KenyamananRuangKelas();
         Test3.KeamananRuangKelas();
         
+        //----------AnalisisRuangKelas----------
+        
+        //Perhitungan()
+        Test3.AnalisisPerhitungan();
+        
+        //KondisiRuangKelas()
+        Test3.AnalisisJumlahPintu();
+        Test3.AnalisisJumlahJendela();
+        
+        //JumlahKondisiDanPosisiSarana()
+        Test3.AnalisisStopKontak();
+        Test3.AnalisisKabelLCD();
+        Test3.AnalisisLampu();
+        Test3.AnalisisKipas();
+        Test3.AnalisisAc();
+        Test3.AnalisisSSID();
+        Test3.AnalisisBandwidth();
+        Test3.AnalisisCctv();
+        
+        //LingkunganRuangKelas()
+        Test3.AnalisisKondisiLantai();
+        Test3.AnalisisKondisiDinding();
+        Test3.AnalisisKondisiAtap();
+        Test3.AnalisisKondisiPintu();
+        Test3.AnalisisKunciJendela();
+        
+        //KebersihanRuangKelas()
+        Test3.AnalisisSirkulasiUdara();
+        Test3.AnalisisNilaiPencahayaan();
+        Test3.AnalisisKelembapan();
+        Test3.AnalisisSuhu();
+        
+        //KenyamananRuangKelas()
+        Test3.AnalisisKebisingan();
+        Test3.AnalisisBau();
+        Test3.AnalisisKebocoran();
+        Test3.AnalisisKerusakan();
+        Test3.AnalisisKeausan();
+        
+        //KeamananRuangKelas()
+        Test3.AnalisisKekokohan();
+        Test3.AnalisisKunciPintu();
+        Test3.AnalisisKunciJendela();
+        Test3.AnalisisBahaya();
+        
     }
 }
