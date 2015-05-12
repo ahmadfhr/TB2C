@@ -70,5 +70,16 @@ public class TestRuangKelas {
         Test3.AnalisisKunciJendela();
         Test3.AnalisisBahaya();
         
+        //-----------OutputRuangKelas-----------
+        
+        Test3.TampilIdentitasRuangKelas();
+        Test3.TampilPerhitungan();
+        Test3.TampilKondisiRuangKelas();
+        Test3.TampilJumlahKondisiDanPosisiSarana();
+        Test3.TampilLingkunganRuangKelas();
+        Test3.TampilKebersihanRuangKelas();
+        Test3.TampilKenyamananRuangKelas();
+        Test3.TampilKeamananRuangKelas();
+                    
     }
 }
