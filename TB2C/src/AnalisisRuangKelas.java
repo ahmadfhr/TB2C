@@ -373,5 +373,10 @@ public class AnalisisRuangKelas extends KontrolRuangKelas{
          } 
          
     }
+
+    @Override
+    public void IndentitasRuangKelas() {
+       
+    }
     
 }

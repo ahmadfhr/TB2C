@@ -1,11 +1,12 @@
 import java.util.Scanner;
 
 
-public class KontrolRuangKelas{
+public abstract class KontrolRuangKelas implements TambahRuangKelas {
     RuangKelas Kontrol = new RuangKelas();
     Scanner in = new Scanner(System.in);
     
     //overloading
+    //untuk menginputkan rang kelas , lokasi ruang dan menentukan program studi/fakultas.
     void IdentitasRuangKelas(String LokasiRuang){
         System.out.println("----------RUANG KHUSUS GKB 1----------\n");
         
@@ -20,23 +21,24 @@ public class KontrolRuangKelas{
         Kontrol.setProgramStudi(ProgramStudi);
         
     }
-    //untuk menginputkan rang kelas , lokasi ruang dan menentukan program studi/fakultas.
-    void IdentitasRuangKelas(){
-        System.out.println("----------LOKASI RUANG SELAIN GKB 1---------\n");
-        
-        System.out.println("Masukkan Nama Ruang Kelas yang Anda Inginkan : ");
-        String NamaRuang = in.nextLine();
-        Kontrol.setNamaRuang(NamaRuang);
-        
-        System.out.println("Masukkan Lokasi Ruang yang Anda Inginkan : ");
-        String LokasiRuang = in.nextLine();
-        Kontrol.setLokasiRuang(LokasiRuang);
-        
-        System.out.println("Masukkan Program Studi atau Fakultas yang Anda Inginkan");
-        String ProgramStudi = in.nextLine();
-        Kontrol.setProgramStudi(ProgramStudi);
-        
-    }
+    
+    
+//    void IdentitasRuangKelas(){
+//        System.out.println("----------LOKASI RUANG SELAIN GKB 1---------\n");
+//        
+//        System.out.println("Masukkan Nama Ruang Kelas yang Anda Inginkan : ");
+//        String NamaRuang = in.nextLine();
+//        Kontrol.setNamaRuang(NamaRuang);
+//        
+//        System.out.println("Masukkan Lokasi Ruang yang Anda Inginkan : ");
+//        String LokasiRuang = in.nextLine();
+//        Kontrol.setLokasiRuang(LokasiRuang);
+//        
+//        System.out.println("Masukkan Program Studi atau Fakultas yang Anda Inginkan");
+//        String ProgramStudi = in.nextLine();
+//        Kontrol.setProgramStudi(ProgramStudi);
+//        
+//    }
     
     
     //untuk menginputkan panjang ruang , lebar ruang dan jumlah kursi.

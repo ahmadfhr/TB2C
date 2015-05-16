@@ -134,4 +134,9 @@ public class OutputRuangKelas extends AnalisisRuangKelas {
         
         
     }
+
+    void IdentitasRuangKelas() {
+        
+    }
+    
 }
