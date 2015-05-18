@@ -136,7 +136,19 @@ public class OutputRuangKelas extends AnalisisRuangKelas {
     }
 
     void IdentitasRuangKelas() {
+        System.out.println("----------LOKASI RUANG SELAIN GKB 1---------\n");
         
+        System.out.println("Masukkan Nama Ruang Kelas yang Anda Inginkan : ");
+        String NamaRuang = in.nextLine();
+        Kontrol.setNamaRuang(NamaRuang);
+        
+        System.out.println("Masukkan Lokasi Ruang yang Anda Inginkan : ");
+        String LokasiRuang = in.nextLine();
+        Kontrol.setLokasiRuang(LokasiRuang);
+        
+        System.out.println("Masukkan Program Studi atau Fakultas yang Anda Inginkan");
+        String ProgramStudi = in.nextLine();
+        Kontrol.setProgramStudi(ProgramStudi);
     }
     
 }

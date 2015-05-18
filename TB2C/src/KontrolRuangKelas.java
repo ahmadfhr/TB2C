@@ -23,7 +23,7 @@ public abstract class KontrolRuangKelas implements TambahRuangKelas {
     }
     
     
-//    void IdentitasRuangKelas(){
+    void IdentitasRuangKelas(){
 //        System.out.println("----------LOKASI RUANG SELAIN GKB 1---------\n");
 //        
 //        System.out.println("Masukkan Nama Ruang Kelas yang Anda Inginkan : ");
@@ -38,7 +38,7 @@ public abstract class KontrolRuangKelas implements TambahRuangKelas {
 //        String ProgramStudi = in.nextLine();
 //        Kontrol.setProgramStudi(ProgramStudi);
 //        
-//    }
+    }
     
     
     //untuk menginputkan panjang ruang , lebar ruang dan jumlah kursi.

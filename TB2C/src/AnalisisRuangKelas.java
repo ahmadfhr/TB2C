@@ -374,7 +374,7 @@ public class AnalisisRuangKelas extends KontrolRuangKelas{
          
     }
 
-    @Override
+    
     public void IndentitasRuangKelas() {
         
         System.out.println("----------LOKASI RUANG SELAIN GKB 1---------\n");
