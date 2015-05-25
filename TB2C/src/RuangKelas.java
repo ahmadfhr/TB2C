@@ -1,12 +1,15 @@
-
+import java.util.Scanner;
 
 public class RuangKelas {
+    
+    Scanner in = new Scanner(System.in);
     
     private String NamaRuang;
     private String LokasiRuang;
     private String ProgramStudi;
     private int PanjangRuang;
     private int LebarRuang;
+    private int TinggiRuang;
     private double Luas;
     private double LuasRasio;
     private int JumlahKursi;
@@ -458,5 +461,15 @@ public class RuangKelas {
     public void setPassword(String Password) {
         this.Password = Password;
     }
-      
+
+  
+    public int getTinggiRuang() {
+        return TinggiRuang;
+    }
+
+  
+    public void setTinggiRuang(int TinggiRuang) {
+        this.TinggiRuang = TinggiRuang;
+    }
+   
 }

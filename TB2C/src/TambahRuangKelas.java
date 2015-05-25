@@ -1,6 +1,7 @@
 
-interface TambahRuangKelas {
+public interface TambahRuangKelas {
     
-    public void IndentitasRuangKelas();
+    double Volume(double PanjangRuang , double LebarRuang , double TinggiRuang);
+    double LuasPermukaan(double PanjangRuang , double LebarRuang , double TinggiRuang);
     
 }

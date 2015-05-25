@@ -1,27 +1,47 @@
 
 public class OutputRuangKelas extends AnalisisRuangKelas {
+    /*
+    KontrolRuangKelas Test2 = new KontrolRuangKelas();
     
-
+    void input(){
+        Test2.IdentitasRuangKelas();
+        Test2.Perhitungan();
+        Test2.TambahPerhitungan();
+        Test2.KondisiRuangKelas();
+        Test2.JumlahKondisiDanPosisiSarana();
+        Test2.LingkunganRuangKelas(); 
+        Test2.KebersihanRuangKelas();
+        Test2.KenyamananRuangKelas();
+        Test2.KeamananRuangKelas();
+    }
+*/
     void TampilIdentitasRuangKelas(){
         
         System.out.println("\n----------Identitas Ruang Kelas----------\n");
-        System.out.println("Nama Ruang Kelas :" +Kontrol.getNamaRuang());
-        System.out.println("Lokasi Ruang Kelas :"+Kontrol.getLokasiRuang());
-        System.out.println("Program Studi/Fakultas :"+Kontrol.getProgramStudi());
+        System.out.println("Nama Ruang Kelas :" +getNamaRuang());
+        System.out.println("Lokasi Ruang Kelas :"+getLokasiRuang());
+        System.out.println("Program Studi/Fakultas :"+getProgramStudi());
     }
     void TampilPerhitungan(){
         
-        System.out.println("\nLuas : "+Kontrol.getLuas());
-        System.out.println("Luas Rasio : "+Kontrol.getLuasRasio());
+        System.out.println("\nLuas : "+getLuas());
+        System.out.println("Luas Rasio : "+getLuasRasio());
+    }
+        
+    void TampilTambahPerhitungan(){
+            
+        System.out.println("\nVolume : "+Volume(getPanjangRuang(), getLebarRuang(), getTinggiRuang()));
+        System.out.println("Luas Permukaan : "+LuasPermukaan(getPanjangRuang(), getLebarRuang(), getTinggiRuang()));
         
     }
+    
     void TampilKondisiRuangKelas(){
         
         System.out.println("\n----------Jumlah Pintu----------\n");
-        System.out.println("Jumlah pintu :" +Kontrol.getJumlahPintu());
+        System.out.println("Jumlah pintu :" +getJumlahPintu());
         
         System.out.println("\n----------Jumlah Jendela----------\n");
-        System.out.println("Jumlah Jendela :" +Kontrol.getJumlahJendela());
+        System.out.println("Jumlah Jendela :" +getJumlahJendela());
         
         
     }
@@ -29,126 +49,111 @@ public class OutputRuangKelas extends AnalisisRuangKelas {
     void TampilJumlahKondisiDanPosisiSarana(){
         
          System.out.println("\n----------Stop Kontak/Steker----------\n");
-         System.out.println("Jumlah Stop Kontak :"+Kontrol.getJumlahStopKontak());
-         System.out.println("Kondisi Stop Kontak :"+Kontrol.getKondisiStopKontak());
-         System.out.println("Posisi Stop Kontak :"+Kontrol.getPosisiStopKontak());
+         System.out.println("Jumlah Stop Kontak :"+getJumlahStopKontak());
+         System.out.println("Kondisi Stop Kontak :"+getKondisiStopKontak());
+         System.out.println("Posisi Stop Kontak :"+getPosisiStopKontak());
          
          System.out.println("\n----------Kabel LCD----------\n");
-         System.out.println("Jumlah Kabel LCD :"+Kontrol.getJumlahKabelLcd());
-         System.out.println("Kondisi Kabel LCD :"+Kontrol.getKondisiKabelLcd());
-         System.out.println("Posisi Kabel LCD :"+Kontrol.getPosisiKabelLcd());
+         System.out.println("Jumlah Kabel LCD :"+getJumlahKabelLcd());
+         System.out.println("Kondisi Kabel LCD :"+getKondisiKabelLcd());
+         System.out.println("Posisi Kabel LCD :"+getPosisiKabelLcd());
          
          System.out.println("----------Lampu----------\n");
-         System.out.println("Jumlah Lampu :"+Kontrol.getJumlahLampu());
-         System.out.println("Kondisi Lampu :"+Kontrol.getKondisiLampu());
-         System.out.println("Posisi Lampu :"+Kontrol.getPosisiLampu());
+         System.out.println("Jumlah Lampu :"+getJumlahLampu());
+         System.out.println("Kondisi Lampu :"+getKondisiLampu());
+         System.out.println("Posisi Lampu :"+getPosisiLampu());
          
          System.out.println("----------Kipas Angin----------\n");
-         System.out.println("Jumlah Kipas Angin :"+Kontrol.getJumlahKipas());
-         System.out.println("Kondisi Kipas Angin :"+Kontrol.getKondisiKipas());
-         System.out.println("Posisi Kipas Angin :"+Kontrol.getPosisiKipas());
+         System.out.println("Jumlah Kipas Angin :"+getJumlahKipas());
+         System.out.println("Kondisi Kipas Angin :"+getKondisiKipas());
+         System.out.println("Posisi Kipas Angin :"+getPosisiKipas());
          
          System.out.println("----------AC----------\n");
-         System.out.println("Jumlah AC :"+Kontrol.getJumlahAc());
-         System.out.println("Kondisi Ac :"+Kontrol.getKondisiAc());
-         System.out.println("Posisi Ac :"+Kontrol.getPosisiAc());
+         System.out.println("Jumlah AC :"+getJumlahAc());
+         System.out.println("Kondisi Ac :"+getKondisiAc());
+         System.out.println("Posisi Ac :"+getPosisiAc());
          
          System.out.println("----------SSID----------\n");
-         System.out.println("SSID :"+Kontrol.getSSID());
+         System.out.println("SSID :"+getSSID());
          
          System.out.println("-----------Bandwidth-----------");
-         System.out.println("Banwidth : "+Kontrol.getBandwidth());
+         System.out.println("Banwidth : "+getBandwidth());
          
          System.out.println("\n----------Kabel CCTV----------\n");
-         System.out.println("Jumlah CCTV :"+Kontrol.getJumlahCctv());
-         System.out.println("Kondisi CCTV :"+Kontrol.getKondisiCctv());
-         System.out.println("Posisi CCTV :"+Kontrol.getPosisiCctv());
+         System.out.println("Jumlah CCTV :"+getJumlahCctv());
+         System.out.println("Kondisi CCTV :"+getKondisiCctv());
+         System.out.println("Posisi CCTV :"+getPosisiCctv());
          
     }
     
     void TampilLingkunganRuangKelas(){
         
        System.out.println("----------Kondisi Lantai----------\n");
-       System.out.println("Kondisi Lantai :"+Kontrol.getKondisiLantai());
+       System.out.println("Kondisi Lantai :"+getKondisiLantai());
        
        System.out.println("----------Kondisi Dinding----------\n");
-       System.out.println("Kondisi Dinding :"+Kontrol.getKondisiDinding());
+       System.out.println("Kondisi Dinding :"+getKondisiDinding());
        
        System.out.println("----------Kondisi Atap----------\n");
-       System.out.println("Kondisi Atap :"+Kontrol.getKondisiAtap());
+       System.out.println("Kondisi Atap :"+getKondisiAtap());
        
        System.out.println("----------Kondisi Pintu----------\n");
-       System.out.println("Kondisi Pintu :"+Kontrol.getKondisiPintu());
+       System.out.println("Kondisi Pintu :"+getKondisiPintu());
        
        System.out.println("----------Kondisi Jendela----------\n");
-       System.out.println("Kondisi Jendela :"+Kontrol.getKondisiJendela());
+       System.out.println("Kondisi Jendela :"+getKondisiJendela());
        
     }
     
     void TampilKebersihanRuangKelas(){
         
         System.out.println("----------Sirkulasi Udara----------\n");
-        System.out.println("Sirkulasi Udara :"+Kontrol.getSirkulasiUdara());
+        System.out.println("Sirkulasi Udara :"+getSirkulasiUdara());
         
         System.out.println("----------Nilai Pencahayaan----------\n");
-        System.out.println("Nilai Pencahayaan :"+Kontrol.getNilaiPencahayaan());
+        System.out.println("Nilai Pencahayaan :"+getNilaiPencahayaan());
         
         System.out.println("----------Kelembapan----------\n");
-        System.out.println("Kelembapan :"+Kontrol.getKelembapan());
+        System.out.println("Kelembapan :"+getKelembapan());
         
         System.out.println("----------Suhu----------\n");
-        System.out.println("Suhu :"+Kontrol.getSuhu());
+        System.out.println("Suhu :"+getSuhu());
     }
     
     void TampilKenyamananRuangKelas(){
         
         System.out.println("----------Kebisingan----------\n");
-        System.out.println("Kebisingan :"+Kontrol.getKebisingan());
+        System.out.println("Kebisingan :"+getKebisingan());
         
         System.out.println("----------Bau----------\n");
-        System.out.println("Bau :"+Kontrol.getBau());
+        System.out.println("Bau :"+getBau());
         
         System.out.println("----------Kebocoran----------\n");
-        System.out.println("Kebocoran :"+Kontrol.getKebocoran());
+        System.out.println("Kebocoran :"+getKebocoran());
         
         System.out.println("----------Kerusakan----------\n");
-        System.out.println("Kerusakan :"+Kontrol.getKerusakan());
+        System.out.println("Kerusakan :"+getKerusakan());
         
         System.out.println("----------Keausan----------\n");
-        System.out.println("Keausan :"+Kontrol.getKeausan());
+        System.out.println("Keausan :"+getKeausan());
     }
     
     void TampilKeamananRuangKelas(){
         
         System.out.println("----------Kekokohan----------\n");
-        System.out.println("Kekokohan :"+Kontrol.getKekokohan());
+        System.out.println("Kekokohan :"+getKekokohan());
         
         System.out.println("----------Kunci Pintu----------\n");
-        System.out.println("Kunci Pintu :"+Kontrol.getKunciPintu());
+        System.out.println("Kunci Pintu :"+getKunciPintu());
         
         System.out.println("----------Kunci Jendela----------\n");
-        System.out.println("Kunci Jedela :"+Kontrol.getKunciJendela());
+        System.out.println("Kunci Jedela :"+getKunciJendela());
         
         System.out.println("----------Bahaya----------\n");
-        System.out.println("Bahaya :"+Kontrol.getBahaya());
+        System.out.println("Bahaya :"+getBahaya());
         
         
     }
 
-    void IdentitasRuangKelas() {
-        System.out.println("----------LOKASI RUANG SELAIN GKB 1---------\n");
-        
-        System.out.println("Masukkan Nama Ruang Kelas yang Anda Inginkan : ");
-        String NamaRuang = in.nextLine();
-        Kontrol.setNamaRuang(NamaRuang);
-        
-        System.out.println("Masukkan Lokasi Ruang yang Anda Inginkan : ");
-        String LokasiRuang = in.nextLine();
-        Kontrol.setLokasiRuang(LokasiRuang);
-        
-        System.out.println("Masukkan Program Studi atau Fakultas yang Anda Inginkan");
-        String ProgramStudi = in.nextLine();
-        Kontrol.setProgramStudi(ProgramStudi);
-    }
-    
+  
 }

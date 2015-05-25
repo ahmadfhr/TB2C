@@ -5,26 +5,25 @@ public class TestRuangKelas {
     public static void main(String[]args){
         Scanner in = new Scanner(System.in);
         
-        OutputRuangKelas Test3 = new OutputRuangKelas();
+        KontrolRuangKelas Test2 = new KontrolRuangKelas();
+    //    OutputRuangKelas Test3 = new OutputRuangKelas();
         
         //----------KontrolRuangKelas----------
         
-        System.out.println("Apakah Ruangan anda di GKB 1  (ya/tidak) : ");
-        String LokasiRuang = in.nextLine();
-        if(LokasiRuang.equalsIgnoreCase("ya")){
-           Test3.IdentitasRuangKelas("GKB 1");
-        }
-        else{Test3.IdentitasRuangKelas();}
+        Test2.IdentitasRuangKelas();
+        Test2.Perhitungan();
+        Test2.TambahPerhitungan();
+        Test2.KondisiRuangKelas();
+        Test2.JumlahKondisiDanPosisiSarana();
+        Test2.LingkunganRuangKelas(); 
+        Test2.KebersihanRuangKelas();
+        Test2.KenyamananRuangKelas();
+        Test2.KeamananRuangKelas();
+       
+       
         
         
-        Test3.Perhitungan();
-        Test3.KondisiRuangKelas();
-        Test3.JumlahKondisiDanPosisiSarana();
-        Test3.LingkunganRuangKelas(); 
-        Test3.KebersihanRuangKelas();
-        Test3.KenyamananRuangKelas();
-        Test3.KeamananRuangKelas();
-        
+        /*
         //----------AnalisisRuangKelas----------
         
         //Perhitungan()
@@ -49,7 +48,7 @@ public class TestRuangKelas {
         Test3.AnalisisKondisiDinding();
         Test3.AnalisisKondisiAtap();
         Test3.AnalisisKondisiPintu();
-        Test3.AnalisisKunciJendela();
+        Test3.AnalisisKondisiJendela();
         
         //KebersihanRuangKelas()
         Test3.AnalisisSirkulasiUdara();
@@ -80,6 +79,6 @@ public class TestRuangKelas {
         Test3.TampilKebersihanRuangKelas();
         Test3.TampilKenyamananRuangKelas();
         Test3.TampilKeamananRuangKelas();
-                    
+          */          
     }
 }
