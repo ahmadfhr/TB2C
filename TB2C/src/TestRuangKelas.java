@@ -20,7 +20,8 @@ public class TestRuangKelas {
         Test2.KenyamananRuangKelas();
         Test2.KeamananRuangKelas();
        
-       
+        Test2.Analisis();
+        Test2.Output();
         
         
         /*
