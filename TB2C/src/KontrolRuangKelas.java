@@ -1,11 +1,12 @@
 
+import java.io.*;
 import java.util.Scanner;
 
 
-public class KontrolRuangKelas{
+public class KontrolRuangKelas implements Serializable {
     
     OutputRuangKelas Test3 = new OutputRuangKelas();
-    Scanner in =  new Scanner(System.in);
+    transient Scanner in =  new Scanner(System.in);
     
     void Analisis(){
         //----------AnalisisRuangKelas----------
@@ -72,6 +73,7 @@ public class KontrolRuangKelas{
         void IdentitasRuangKelas(){
         System.out.println("----------Lokasi Ruang---------\n");
         
+        
         System.out.println("Masukkan Nama Ruang Kelas yang Anda Inginkan : ");
         String NamaRuang = in.nextLine();
         Test3.setNamaRuang(NamaRuang);
@@ -84,6 +86,20 @@ public class KontrolRuangKelas{
         String ProgramStudi = in.nextLine();
         Test3.setProgramStudi(ProgramStudi);
         
+        try{
+            FileWriter save = new FileWriter("save_IdentitasRuangKelas.txt");
+            File file = new File("save_IdentasRuangKelas.txt");
+            if(file.exists()){
+                System.out.println("\n>>>>BERHASIL SAVE<<<<");
+            }
+            save.write(Test3.getNamaRuang()+"\n");
+            save.write(Test3.getLokasiRuang()+"\n");
+            save.write(Test3.getProgramStudi()+"\n");
+            save.close();
+        }catch(IOException fail){
+            System.out.println(">>>>GAGAL SAVE<<<<");
+            fail.printStackTrace();
+        }
     }
     
     
@@ -103,6 +119,21 @@ public class KontrolRuangKelas{
         System.out.println("Masukkan Jumlah Kursi yang ada di ruang kelas : ");
         int JumlahKursi = in.nextInt();
         Test3.setJumlahKursi(JumlahKursi);
+        
+        try{
+            FileWriter save= new FileWriter("save_Perhitungan.txt");
+            File file = new File("save_Perhitungan.txt");
+            if(file.exists()){
+                System.out.println("\n>>>>BERHASIL SAVE<<<<");
+            }
+            save.write(""+Test3.getPanjangRuang()+"\n");
+            save.write(""+Test3.getLebarRuang()+"\n");
+            save.write(""+Test3.getJumlahKursi()+"\n");
+            save.close();
+        }catch(IOException fail){
+            System.out.println(">>>>GAGAL SAVE<<<<");
+            fail.printStackTrace();
+        }
          
     }
     
@@ -113,6 +144,19 @@ public class KontrolRuangKelas{
         System.out.println("Masukkan Tinggi Ruang Kelas yang Anda Inginkan : ");
         int TinggiRuang = in.nextInt();
         Test3.setTinggiRuang(TinggiRuang);
+        
+        try{
+            FileWriter save = new FileWriter("save_TambahPerhitungan.txt");
+            File file = new File("save_TambahPerhitungan.txt");
+            if(file.exists()){
+                System.out.println("\n>>>>BERHASIL SAVE<<<<");
+            }
+            save.write(""+Test3.getTinggiRuang()+"\n");
+            save.close();
+        }catch(IOException fail){
+            System.out.println(">>>>GAGAL SAVE<<<<");
+            fail.printStackTrace();
+        }
         
     }
     //untuk menginputkan jumlah pintu , jumlah jendela .
@@ -125,6 +169,20 @@ public class KontrolRuangKelas{
         System.out.println("Masukkan Jumlah Jendela yang ada di ruang kelas : ");
         int JumlahJendela = in.nextInt();
         Test3.setJumlahJendela(JumlahJendela);
+        
+        try{
+            FileWriter save = new FileWriter("save_KondisiRuangKelas.txt");
+            File file = new File("save_KondisiRuangKelas.txt");
+            if(file.exists()){
+                System.out.println("\n>>>>BERHASIL SAVE<<<<");
+            }
+            save.write(""+Test3.getJumlahPintu()+"\n");
+            save.write(""+Test3.getJumlahJendela()+"\n");
+            save.close();
+        }catch(IOException fail){
+            System.out.println(">>>>GAGAL SAVE<<<<");
+            fail.printStackTrace();
+        }
        
     }
     
@@ -212,6 +270,49 @@ public class KontrolRuangKelas{
          System.out.println("Masukkan posisi CCTV yang ada di ruang tersebut :");
          String PosisiCctv = in.nextLine();
          Test3.setPosisiCctv(PosisiCctv);
+         
+         try{
+            FileWriter save = new FileWriter("save_JumlahKondisiDanPosisiSarana.txt");
+            File file = new File("save_JumlahKondisiDanPosisiSarana.txt");
+            if(file.exists()){
+                System.out.println("\n>>>>BERHASIL SAVE<<<<");
+            }
+            save.write(""+Test3.getJumlahStopKontak()+"\n");
+            save.write(Test3.getKondisiStopKontak()+"\n");
+            save.write(Test3.getPosisiStopKontak()+"\n\n");
+            
+            save.write(""+Test3.getJumlahKabelLcd()+"\n");
+            save.write(Test3.getKondisiKabelLcd()+"\n");
+            save.write(Test3.getPosisiKabelLcd()+"\n\n");
+            
+            save.write(""+Test3.getJumlahLampu()+"\n");
+            save.write(Test3.getKondisiLampu()+"\n");
+            save.write(Test3.getPosisiLampu()+"\n\n");
+            
+            save.write(""+Test3.getJumlahKipas()+"\n");
+            save.write(Test3.getKondisiKipas()+"\n");
+            save.write(Test3.getPosisiKipas()+"\n\n");
+            
+            save.write(""+Test3.getJumlahAc()+"\n");
+            save.write(Test3.getKondisiAc()+"\n");
+            save.write(Test3.getPosisiAc()+"\n\n");
+            
+            save.write(Test3.getSSID()+"\n");
+            
+            
+            save.write(Test3.getID()+"\n");
+            save.write(Test3.getPassword()+"\n\n");
+            
+            save.write(""+Test3.getJumlahCctv()+"\n");
+            save.write(Test3.getKondisiCctv()+"\n");
+            save.write(Test3.getPosisiCctv()+"\n");
+            
+            
+            save.close();
+        }catch(IOException fail){
+            System.out.println(">>>>GAGAL SAVE<<<<");
+            fail.printStackTrace();
+        }
   
     }
     //untuk menginputkan dan menganalisis kondisi lantai , dinding , atap , pintu dan jendela.
@@ -241,6 +342,25 @@ public class KontrolRuangKelas{
        String KondisiJendela = in.nextLine();
        Test3.setKondisiJendela(KondisiJendela);
        
+       try{
+            FileWriter save = new FileWriter("save_LingkunganRuangKelas.txt");
+            File file = new File("save_LingkunganRuangKelas.txt");
+            if(file.exists()){
+                System.out.println("\n>>>>BERHASIL SAVE<<<<");
+            }
+            save.write(Test3.getKondisiLantai()+"\n");
+            save.write(Test3.getKondisiDinding()+"\n");
+            save.write(Test3.getKondisiAtap()+"\n");
+            save.write(Test3.getKondisiPintu()+"\n");
+            save.write(Test3.getKondisiJendela()+"\n");
+            
+            save.close();
+        }catch(IOException fail){
+            System.out.println(">>>>GAGAL SAVE<<<<");
+            fail.printStackTrace();
+        }
+       
+       
        }
     //untuk menginputkan dan menganalisis sirkulasi udara , nilai pencahayaan , kelembapan,
     //suhu (Celcius).
@@ -265,6 +385,26 @@ public class KontrolRuangKelas{
         System.out.println("Masukkan Suhu pada Ruang tersebut : ");
         int Suhu = in.nextInt();in.nextLine();
         Test3.setSuhu(Suhu);
+        
+        try{
+            FileWriter save = new FileWriter("save_KebersihanRuangKelas.txt");
+            File file = new File("save_KebersihanRuangKelas.txt");
+            if(file.exists()){
+                System.out.println("\n>>>>BERHASIL SAVE<<<<");
+            }
+            save.write(Test3.getSirkulasiUdara()+"\n");
+            save.write(""+Test3.getNilaiPencahayaan()+"\n");
+            save.write(""+Test3.getKelembapan()+"\n");
+            save.write(""+Test3.getSuhu()+"\n");
+            
+            
+            save.close();
+        }catch(IOException fail){
+            System.out.println(">>>>GAGAL SAVE<<<<");
+            fail.printStackTrace();
+        }
+        
+       
       
     }
     //untuk menginputkan dan menganalisis kebisingan , bau , kebocoran ,kerusakan dan keausan.
@@ -294,6 +434,27 @@ public class KontrolRuangKelas{
         System.out.println("Masukkan keausan pada ruang tersebut : ");
         String Keausan = in.nextLine();
         Test3.setKeausan(Keausan);
+        
+        try{
+            FileWriter save = new FileWriter("save_KenyamananRuangKelas.txt");
+            File file = new File("save_KenyamananRuangKelas.txt");
+            if(file.exists()){
+                System.out.println("\n>>>>BERHASIL SAVE<<<<");
+            }
+            save.write(Test3.getKebisingan()+"\n");
+            save.write(Test3.getBau()+"\n");
+            save.write(Test3.getKebocoran()+"\n");
+            save.write(Test3.getKerusakan()+"\n");
+            save.write(Test3.getKeausan()+"\n");
+            
+            
+            save.close();
+        }catch(IOException fail){
+            System.out.println(">>>>GAGAL SAVE<<<<");
+            fail.printStackTrace();
+        }
+        
+        
  
     }
     //untuk menginputkan dan menganalisis kekokohan , kunci pintu dan jendela , dan bahaya.
@@ -318,7 +479,24 @@ public class KontrolRuangKelas{
         System.out.println("Masukkkan bahaya dalam ruang tersebut : ");
         String Bahaya = in.nextLine();
         Test3.setBahaya(Bahaya);
+        
+        try{
+            FileWriter save = new FileWriter("save_KeamananRuangKelas.txt");
+            File file = new File("save_KeamananRuangKelas.txt");
+            if(file.exists()){
+                System.out.println("\n>>>>BERHASIL SAVE<<<<");
+            }
+            save.write(Test3.getKekokohan()+"\n");
+            save.write(Test3.getKunciPintu()+"\n");
+            save.write(Test3.getKunciJendela()+"\n");
+            save.write(Test3.getBahaya()+"\n");
+            
+            
+            save.close();
+        }catch(IOException fail){
+            System.out.println(">>>>GAGAL SAVE<<<<");
+            fail.printStackTrace();
+        }
           
     }
-    
 }

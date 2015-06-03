@@ -1,22 +1,10 @@
 
-public class AnalisisRuangKelas extends ListRuangKelas{
+import java.io.Serializable;
 
-    /*
-    @Override
-    public double Volume(double PanjangRuang, double LebarRuang, double TinggiRuang) {
-       
-        return super.Volume(getPanjangRuang() , getLebarRuang(), getTinggiRuang()); //To change body of generated methods, choose Tools | Templates.
-    }
+
+public class AnalisisRuangKelas extends ListRuangKelas implements Serializable{
 
    
-    @Override
-    public double LuasPermukaan(double PanjangRuang, double LebarRuang, double TinggiRuang) {
-        return super.LuasPermukaan(getPanjangRuang() , getLebarRuang(), getTinggiRuang()); 
-    }*/
-    
-
-    
-    
     @Override
     String AnalisisPerhitungan(){
         
@@ -153,9 +141,9 @@ public class AnalisisRuangKelas extends ListRuangKelas{
     @Override
     String AnalisisBandwidth(){
         
-        if((getID().equalsIgnoreCase("fahri")&&getPassword().equalsIgnoreCase("ale"))||
-            (getID().equalsIgnoreCase("gofur")&&getPassword().equalsIgnoreCase("jo"))||
-            (getID().equalsIgnoreCase("topek")&&getPassword().equalsIgnoreCase("hidayat"))){
+        if((getID().equalsIgnoreCase("ahmad")&&getPassword().equalsIgnoreCase("fahri"))||
+            (getID().equalsIgnoreCase("muhammad")&&getPassword().equalsIgnoreCase("gofur"))||
+            (getID().equalsIgnoreCase("moh")&&getPassword().equalsIgnoreCase("taufiq"))){
               System.out.println("\n-->  Login berhasil dan -->  Bandwidth Sesuai ");
               return"-->  Login berhasil dan -->  Bandwidth Sesuai";
               

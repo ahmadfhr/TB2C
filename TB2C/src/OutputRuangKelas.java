@@ -1,37 +1,32 @@
+import java.io.*;
+import java.io.Serializable;
 
-public class OutputRuangKelas extends AnalisisRuangKelas {
-    /*
-    KontrolRuangKelas Test2 = new KontrolRuangKelas();
+
+public class OutputRuangKelas extends AnalisisRuangKelas implements Serializable {
     
-    void input(){
-        Test2.IdentitasRuangKelas();
-        Test2.Perhitungan();
-        Test2.TambahPerhitungan();
-        Test2.KondisiRuangKelas();
-        Test2.JumlahKondisiDanPosisiSarana();
-        Test2.LingkunganRuangKelas(); 
-        Test2.KebersihanRuangKelas();
-        Test2.KenyamananRuangKelas();
-        Test2.KeamananRuangKelas();
-    }
-*/
     void TampilIdentitasRuangKelas(){
         
         System.out.println("\n----------Identitas Ruang Kelas----------\n");
         System.out.println("Nama Ruang Kelas :" +getNamaRuang());
         System.out.println("Lokasi Ruang Kelas :"+getLokasiRuang());
         System.out.println("Program Studi/Fakultas :"+getProgramStudi());
+        
+        
     }
+    
     void TampilPerhitungan(){
         
         System.out.println("\nLuas : "+getLuas());
         System.out.println("Luas Rasio : "+getLuasRasio());
+        
+        
     }
         
     void TampilTambahPerhitungan(){
             
         System.out.println("\nVolume : "+Volume(getPanjangRuang(), getLebarRuang(), getTinggiRuang()));
         System.out.println("Luas Permukaan : "+LuasPermukaan(getPanjangRuang(), getLebarRuang(), getTinggiRuang()));
+        
         
     }
     
@@ -43,7 +38,7 @@ public class OutputRuangKelas extends AnalisisRuangKelas {
         System.out.println("\n----------Jumlah Jendela----------\n");
         System.out.println("Jumlah Jendela :" +getJumlahJendela());
         
-        
+       
     }
     
     void TampilJumlahKondisiDanPosisiSarana(){
@@ -84,6 +79,7 @@ public class OutputRuangKelas extends AnalisisRuangKelas {
          System.out.println("Kondisi CCTV :"+getKondisiCctv());
          System.out.println("Posisi CCTV :"+getPosisiCctv());
          
+        
     }
     
     void TampilLingkunganRuangKelas(){
@@ -103,6 +99,7 @@ public class OutputRuangKelas extends AnalisisRuangKelas {
        System.out.println("----------Kondisi Jendela----------\n");
        System.out.println("Kondisi Jendela :"+getKondisiJendela());
        
+      
     }
     
     void TampilKebersihanRuangKelas(){
@@ -118,6 +115,10 @@ public class OutputRuangKelas extends AnalisisRuangKelas {
         
         System.out.println("----------Suhu----------\n");
         System.out.println("Suhu :"+getSuhu());
+        
+        System.out.println("\n>>>>HASIL LOAD<<<<");
+        
+        
     }
     
     void TampilKenyamananRuangKelas(){
@@ -136,6 +137,10 @@ public class OutputRuangKelas extends AnalisisRuangKelas {
         
         System.out.println("----------Keausan----------\n");
         System.out.println("Keausan :"+getKeausan());
+        
+        System.out.println("\n>>>>HASIL LOAD<<<<");
+        
+       
     }
     
     void TampilKeamananRuangKelas(){
