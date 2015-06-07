@@ -2,7 +2,7 @@
 import java.io.Serializable;
 
 
-public class AnalisisRuangKelas extends ListRuangKelas implements Serializable{
+public class AnalisisRuangKelas extends ListRuangKelas{
 
    
     @Override

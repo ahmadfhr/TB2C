@@ -1,7 +1,7 @@
 import java.io.Serializable;
 import java.util.Scanner;
 
-public class RuangKelas implements Serializable {
+public class RuangKelas{
     
     Scanner in = new Scanner(System.in);
     

@@ -2,7 +2,7 @@ import java.io.*;
 import java.io.Serializable;
 
 
-public class OutputRuangKelas extends AnalisisRuangKelas implements Serializable {
+public class OutputRuangKelas extends AnalisisRuangKelas{
     
     void TampilIdentitasRuangKelas(){
         
@@ -11,7 +11,7 @@ public class OutputRuangKelas extends AnalisisRuangKelas implements Serializable
         System.out.println("Lokasi Ruang Kelas :"+getLokasiRuang());
         System.out.println("Program Studi/Fakultas :"+getProgramStudi());
         
-       
+        
     
     }
     
@@ -20,7 +20,7 @@ public class OutputRuangKelas extends AnalisisRuangKelas implements Serializable
         System.out.println("\nLuas : "+getLuas());
         System.out.println("Luas Rasio : "+getLuasRasio());
         
-
+        
         
     }
         
@@ -29,7 +29,8 @@ public class OutputRuangKelas extends AnalisisRuangKelas implements Serializable
         System.out.println("\nVolume : "+Volume(getPanjangRuang(), getLebarRuang(), getTinggiRuang()));
         System.out.println("Luas Permukaan : "+LuasPermukaan(getPanjangRuang(), getLebarRuang(), getTinggiRuang()));
         
-
+        
+       
     }
     
     void TampilKondisiRuangKelas(){
@@ -40,7 +41,6 @@ public class OutputRuangKelas extends AnalisisRuangKelas implements Serializable
         System.out.println("\n----------Jumlah Jendela----------\n");
         System.out.println("Jumlah Jendela :" +getJumlahJendela());
         
-
         
     }
     
@@ -82,7 +82,6 @@ public class OutputRuangKelas extends AnalisisRuangKelas implements Serializable
          System.out.println("Kondisi CCTV :"+getKondisiCctv());
          System.out.println("Posisi CCTV :"+getPosisiCctv());
          
-
          
     }
     
@@ -103,9 +102,7 @@ public class OutputRuangKelas extends AnalisisRuangKelas implements Serializable
        System.out.println("----------Kondisi Jendela----------\n");
        System.out.println("Kondisi Jendela :"+getKondisiJendela());
        
-
-       
-       
+      
     }
     
     void TampilKebersihanRuangKelas(){
@@ -121,8 +118,6 @@ public class OutputRuangKelas extends AnalisisRuangKelas implements Serializable
         
         System.out.println("----------Suhu----------\n");
         System.out.println("Suhu :"+getSuhu());
-        
-
         
         
     }
@@ -144,7 +139,7 @@ public class OutputRuangKelas extends AnalisisRuangKelas implements Serializable
         System.out.println("----------Keausan----------\n");
         System.out.println("Keausan :"+getKeausan());
         
-
+        
     }
     
     void TampilKeamananRuangKelas(){
@@ -161,7 +156,7 @@ public class OutputRuangKelas extends AnalisisRuangKelas implements Serializable
         System.out.println("----------Bahaya----------\n");
         System.out.println("Bahaya :"+getBahaya());
         
-
+        
         
         
     }
